@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>	
+		<script type="text/javascript">
+			var x = 10;
+			function sayHi(){
+				console.log(x);
+				var x = 20;
+				console.log(x);
+			}
+			sayHi();
+		</script>
+
+</head>
+<body>
+	<input type="" name=""><button>Go</button>
+	Country: <select id="country">
+		<option>Jordan</option>
+		<option>Iraq</option>
+		<option>USA</option>
+	</select>
+	<select id="city">
+		<option> -- Select City -- </option>
+		<option>Amman</option>
+		<option>Baghdad</option>
+		
+	</select>
+	 <select id="state">
+		<option>-- Select State -- </option>
+		<option>Washignton</option>
+		<option>Seattle</option>
+		<option>Las Vegas</option>
+	</select>
+<script type="text/javascript">
+	$("#city").hide();
+	$("#state").hide();
+	$("#country").change(function(){
+		var country = $("#country").val();
+		if(country == "USA"){
+			$("#state").show();
+			$("#city").hide();
+		}else{
+			$("#city").show();
+			$("#state").hide();
+		}
+	});
+</script>
+</body>
+</html>
